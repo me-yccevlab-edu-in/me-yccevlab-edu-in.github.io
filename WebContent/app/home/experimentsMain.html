@@ -1,0 +1,18 @@
+<!-- <h1>EXPERIMENTS</h1> -->
+
+<div>
+	<!-- <ul ng-show="!showExpList" class="breadcrumb">
+		<li class="breadcrumb-item"><a ui-sref="experiments">{{breadcrumb.Main}}</a></li>
+	    <li class="breadcrumb-item active" >Experiment 1</li>
+	</ul> -->
+	  
+    <ul ng-show="showExpList" class="nav flex-column">
+	   <li ng-repeat="item in experimentsList track by $index" class="nav-item">
+	     <a class="nav-link padding-left-0" ui-sref="{{item.expAdd}}" ng-click="showExperiment()">EXP {{$index +1}} - {{item.expName}}</a>
+	   </li>
+	   <!-- <li class="nav-item">
+	     <a class="nav-link disabled" ui-sref="/">Disabled</a>
+	   </li> -->
+	</ul>
+	<div ui-view class="fade2 "></div>
+</div>
